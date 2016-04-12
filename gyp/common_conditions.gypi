@@ -113,7 +113,7 @@
                 'DebugInformationFormat': '4', # editAndContiue (/ZI)
                 'Optimization': '0',           # optimizeDisabled (/Od)
                 'PreprocessorDefinitions': ['_DEBUG'],
-                'RuntimeLibrary': '3',         # rtMultiThreadedDebugDLL (/MDd)
+                'RuntimeLibrary': '1',         # rtMultiThreadedDebug (/MTd)
                 'RuntimeTypeInfo': 'false',      # /GR-
               },
               'VCLinkerTool': {
@@ -131,7 +131,7 @@
                #'FloatingPointModel': '2',          # fast (/fp:fast)
                 'FavorSizeOrSpeed': '1',            # speed (/Ot)
                 'PreprocessorDefinitions': ['NDEBUG'],
-                'RuntimeLibrary': '2',              # rtMultiThreadedDLL (/MD)
+                'RuntimeLibrary': '0',              # rtMultiThreaded (/MT)
                 'EnableEnhancedInstructionSet': '2',# /arch:SSE2
                 'RuntimeTypeInfo': 'false',         # /GR-
               },
