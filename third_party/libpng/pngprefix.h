@@ -451,5 +451,7 @@
 #define png_write_sig skia_png_write_sig
 #define png_init_filter_functions_neon skia_png_init_filter_functions_neon
 #define png_init_filter_functions_sse2 skia_png_init_filter_functions_sse2
+#define png_check_keyword skia_png_check_keyword
+#define png_image_write_to_memory skia_png_image_write_to_memory
 
 #endif  // PNGPREFIX_H
