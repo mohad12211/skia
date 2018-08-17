@@ -162,7 +162,7 @@ private:
 
 class Deserializer {
 public:
-    Deserializer(const std::vector<uint8_t>& buffer) : fBuffer{buffer} { }
+    Deserializer(const std::vector<uint8_t>& buffer) : fBuffer(buffer) { }
 
     template <typename T>
     T* read() {
