@@ -327,7 +327,7 @@ opts("hsw") {
   sources = skia_opts.hsw_sources
   if (is_win) {
     cflags = [ "/arch:AVX2" ]
-  } else {
+  } else if (is_clang) {
     cflags = [ "-march=haswell" ]
   }
 
