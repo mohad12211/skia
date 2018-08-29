@@ -94,7 +94,7 @@ config("default") {
     cflags += [
       "-fstrict-aliasing",
       "-fPIC",
-      "-Werror",
+      "-w",
     ]
     cflags_cc += [ "-std=c++11" ]
 
