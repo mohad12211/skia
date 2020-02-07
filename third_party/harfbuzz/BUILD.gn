@@ -22,11 +22,13 @@ if (skia_use_system_harfbuzz) {
       ".",
       _src,
     ]
+    include_dirs = [ "../externals/freetype/include" ]
     defines = [
       "HAVE_ICU",
       "HAVE_ICU_BUILTIN",
       "HAVE_INTEL_ATOMIC_PRIMITIVES",
       "HAVE_OT",
+      "HAVE_FREETYPE",
     ]
     deps = [
       "//third_party/icu",
