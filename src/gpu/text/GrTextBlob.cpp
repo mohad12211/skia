@@ -830,7 +830,7 @@ std::tuple<bool, int> GrTextBlob::VertexRegenerator::updateTextureCoordinatesMay
                           : fFullAtlasManager->atlasGeneration(fSubRun->maskFormat());
     }
 
-    return {code != GrDrawOpAtlas::ErrorCode::kError, glyphsPlacedInAtlas};
+    return std::make_tuple(code != GrDrawOpAtlas::ErrorCode::kError, glyphsPlacedInAtlas);
 }
 
 std::tuple<bool, int> GrTextBlob::VertexRegenerator::regenerate(int begin, int end) {
@@ -853,6 +853,6 @@ std::tuple<bool, int> GrTextBlob::VertexRegenerator::regenerate(int begin, int e
                                                fUploadTarget->tokenTracker()->nextDrawToken(),
                                                fSubRun->maskFormat());
         }
-        return {true, end - begin};
+        return std::make_tuple(true, end - begin);
     }
 }
