@@ -46,7 +46,7 @@ GrProcessorTestData::ProxyInfo GrProcessorTestData::randomAlphaOnlyProxy() {
     int idx = fRandom->nextULessThan(numAlphaOnly);
     for (const auto& [p, ct, at] : fProxies) {
         if (GrColorTypeIsAlphaOnly(ct) && !idx--) {
-            return {p, ct, at};
+            return std::make_tuple(p, ct, at);
         }
     }
     SkUNREACHABLE;
